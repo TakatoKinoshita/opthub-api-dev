@@ -1,0 +1,4 @@
+echo '### init start ###'
+createdb default
+pg_restore --clean --no-owner -d default /docker-entrypoint-initdb.d/bkup
+echo '### init end ###'
